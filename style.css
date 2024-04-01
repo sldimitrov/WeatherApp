@@ -3,14 +3,13 @@
     padding: 0px;
 }
 
-.background-image {
+body {
+    background-image: url("images/background_image.jpg");
     width: 100%;
     height: auto;
-}
-
-.background-container {
-    position: relative;
+    background-repeat: no-repeat;
     background-attachment: fixed;
+    background-position: center;
 }
   
   .right {
