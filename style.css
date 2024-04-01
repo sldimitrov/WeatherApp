@@ -10,6 +10,7 @@ body {
 }
   
 .weather-tab-container {
+    color: aliceblue;
     position: absolute;
     width: 33%;
     height: 100%;
@@ -74,6 +75,13 @@ body {
     width: 30px;
 }
 
+.weather-container{
+    border-left: 4px inset white;
+}
+.location {
+    width: 30px;
+}
+
 #searcher {
     width: 30px;
     height: 30px;
@@ -82,6 +90,13 @@ body {
 .mid-text {
     width: 300px;
     height: 50px;
+}
+
+.weather-format{
+    height: auto;
+    margin-left: 10%;
+    margin-right:10%;
+    display: flex;
 }
 
 .tab-header {
@@ -96,4 +111,15 @@ body {
     border-bottom: 3px outset white;
     padding-left: 1em;
     padding-right: 1em;
+}
+
+#tab-details {
+    height: auto;
+    margin-left: 10%;
+    margin-right:10%;
+    display: flex;
+}
+
+#row1 {
+    display: flex;
 }
