@@ -11,6 +11,7 @@ body {
   
 .weather-tab-container {
     color: aliceblue;
+    border-left: 3px solid cadetblue;
     position: absolute;
     width: 33%;
     height: 100%;
@@ -36,7 +37,7 @@ body {
 }
 
 .small-text {
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .mid-text {
@@ -54,7 +55,6 @@ body {
     max-width: 40%;
     margin-top: 26em;
     margin-left: 4em;
-    padding-bottom: 50px;
 }
 
 .main-info {
@@ -108,7 +108,7 @@ body {
     justify-content: space-evenly;
     align-items:baseline;
     color: white;
-    border-bottom: 3px outset white;
+    border-bottom: 3px outset ghostwhite;
     padding-left: 1em;
     padding-right: 1em;
 }
@@ -127,11 +127,12 @@ body {
     align-items:baseline;
 }
 
+.weather-tab-container, .section-header{
+    font-size: 20px;
+    text-align: center;
+}
+
 #hot {
     width: 25px;
     height: 35px;
-}
-
-#program-header {
-    justify-content:center;
 }
