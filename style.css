@@ -118,8 +118,20 @@ body {
     margin-left: 10%;
     margin-right:10%;
     display: flex;
+    
 }
 
 #row1 {
+    height: 40px;
     display: flex;
+    align-items:baseline;
+}
+
+#hot {
+    width: 25px;
+    height: 35px;
+}
+
+#program-header {
+    justify-content:center;
 }
