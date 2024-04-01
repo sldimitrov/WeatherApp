@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    flex-direction: column;
+
+}
+.box {
+    width: 100px;
+    height: 100px;
+    font-size: 1em;
+    text-align: center; 
+    border-radius: 15px;
+}
+#logo-image {
+    background-color: red;
+}
+#sample-text {
+    background-color: green;
+}
+#search-icon {
+    background-color: blue;
+}
+

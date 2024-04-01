@@ -1,3 +1,28 @@
-h1 {
-    color: green;
+.html, body {
+    margin: 0px;
+    padding: 0px;
 }
+
+.background-image {
+    width: 100%;
+    height: auto;
+}
+
+.background-container {
+    position: relative;
+    background-attachment: fixed;
+}
+  
+  .right {
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    background-color: white;
+    background-image: url("images/background_image.jpg");
+    filter: blur(4px);
+    opacity: 1;
+    right: 0;
+  }
+
