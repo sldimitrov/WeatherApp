@@ -9,7 +9,7 @@ body {
     background-position: center;
 }
   
-.right {
+.weather-container {
     position: absolute;
     width: 33%;
     height: 100%;
@@ -24,7 +24,11 @@ body {
 
 .cloudy-icon {
     width: 100px;
-    margin-top: 30px;
+    margin-top: 50px;
+}
+
+#logo {
+    width: 150px;
 }
 
 .small-text {
@@ -36,7 +40,7 @@ body {
 }
 
 .big-text {
-    font-size: 80px;
+    font-size: 90px;
 }
 
 .info-container {
@@ -46,6 +50,7 @@ body {
     max-width: 40%;
     margin-top: 26em;
     margin-left: 4em;
+    padding-bottom: 50px;
 }
 
 .main-info {
@@ -56,8 +61,16 @@ body {
 
 #date {
     padding-left: 40px;
-    padding-bottom: 15px;
 }
 
+.weather-container{
+    border-left: 4px inset white;
+}
 
+.location {
+    width: 30px;
+}
 
+#searcher {
+    width: 30px;
+}
