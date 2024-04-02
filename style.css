@@ -19,7 +19,6 @@ body {
     justify-content:baseline;
     flex-wrap: wrap;
     max-width: 30em;
-    border-color: 3px solid wheat;
     margin-left: 10em;
     margin-top: 25em;
     width: 30em;
@@ -48,7 +47,7 @@ body {
 
 .weather-details, #thunder {
     font-family: "Libre Baskerville", serif;
-    font-weight: 600;
+    font-weight: 400;
     font-style:italic;
 }
 
@@ -66,16 +65,21 @@ body {
 }
 
 
-#forecast {
+#forecast-title {
     padding-top: 0.8em;
     padding-bottom: 0.4em;
     text-align: left;
 }
 
-.forecast-image, #snowflake-img {
+.forecast-image, #snowflake1, #snowflake2 {
     padding-left: 1em;
-    width: 30px;
-    height: 30px;
+    width: 33px;
+    height: 33px;
+}
+
+.temperature {
+    font-size: 1.5em;
+    padding-top: 0.3em;
 }
 
 .forecast-info {
@@ -121,7 +125,7 @@ body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    opacity: 0.5;
+    opacity: 0.6;
     padding-right: 2em;
     margin-right: 2em;
 }
@@ -136,11 +140,6 @@ body {
     width: 16em;
     height: 5em;
     padding-left: 12.5em;
-}
-
-.temperature {
-    font-size: 1.5em;
-    padding-top: 0.3em;
 }
 
 #search {
@@ -169,13 +168,6 @@ body {
     padding-left: 2em;
 }
 
-#blank-line {
-    margin-top: 1em;
-    margin-left: 1em;
-    margin-right: 1em;
-    border-bottom: 1px inset ghostwhite;
-}
-
 .weather-format{
     height: auto;
     margin-left: 10%;
@@ -191,7 +183,7 @@ body {
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items:baseline;
-    border-bottom: 3px outset ghostwhite;
+    border-bottom: 2px outset ghostwhite;
     margin-left: 1em;
     margin-right: 1em;
     padding-left: 1em;
@@ -203,5 +195,12 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+#blank-line {
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    border-bottom: 1px inset ghostwhite;
 }
 
