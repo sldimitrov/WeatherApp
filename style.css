@@ -45,21 +45,13 @@ body {
     padding-left: 4em;
 }
 
+#searcher {
+    width: 25px;
+    height: 25px;
+}
+
 #logo {
     width: 150px;
-}
-
-#city {
-    display: flex;
-    flex-direction: column;
-    font-size: 30px;
-    
-}
-
-#date {
-    color: white;
-    padding-top: 5px;
-    font-size: 15px;
 }
 
 .info-container {
@@ -77,6 +69,7 @@ body {
     height: 40px;
 }
 #date {
+    color: white;
     padding-left: 40px;
 }
 
@@ -94,11 +87,6 @@ body {
 }
 .location {
     width: 30px;
-}
-
-#searcher {
-    width: 25px;
-    height: 25px;
 }
 
 .mid-text {

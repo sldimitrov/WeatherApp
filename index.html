@@ -9,11 +9,11 @@
 </head>
 <body>
 
-    <div id="logo-image">
+    <header id="logo-image">
         <img src="images/logo.png" id="logo">
-    </div>
+    </header>
 
-    <div class="info-container">
+    <nav class="info-container">
         <div class="main-info big-text">
             <p id="temperature">16°</p>
         </div>
@@ -29,11 +29,11 @@
             <img src="images/clouds.png" alt="clouds image" class="cloudy-icon">
         </div>
         
-    </div>
+    </nav>
 
-    <div class="weather-tab-container blur"></div>
+    <span class="weather-tab-container blur"></span>
 
-    <div class="weather-tab-container info">
+    <nav class="weather-tab-container info">
         <div class="tab-header">
             <img src="images/search-icon.jpg" alt="search icon" id="searcher"></p>
             <h3 class="small-text" id="search">Search Location...</h3>
@@ -43,8 +43,10 @@
             <p class="small-text weather-format">Weather details...</p>
         </div>
         
-        <div class="weather-details">
-            <p class="section-header">THUNDERSTORM WITH HTML AND CSS</p>
+        <nav class="weather-details">
+            <header class="section-header">
+                THUNDERSTORM WITH HTML AND CSS
+            </header>
             <div class="small-text weather-format" id="row1">
                 <div class="small-text weather-format">
                     Temp max
@@ -56,9 +58,9 @@
                     <img src="images/hot_thermometer.png" alt="hot ternometer" id="hot">
                 </div>
             </div>
-        </div>
+        </nav>
 
-        <div class="weather-details">
+        <nav class="weather-details">
             <div class="small-text weather-format">
                 <div class="small-text weather-format">
                     Temp min
@@ -70,9 +72,9 @@
                     <img src="images/cold_thermometer.png" alt="cold ternometer" id="cold">
                 </div>
             </div>
-        </div>
+        </nav>
 
-        <div class="weather-details">
+        <nav class="weather-details">
             <div class="small-text weather-format">
                 <div class="small-text weather-format" id="humadity">
                      Wet
@@ -84,9 +86,9 @@
                     <img src="images/rainy.png" alt="raindrop" id="rainy">
                 </div>
             </div>
-        </div>
+        </nav>
 
-        <div class="weather-details">
+        <nav class="weather-details">
             <div class="small-text weather-format">
                 <div class="small-text weather-format">
                      Cloudy
@@ -98,9 +100,9 @@
                     <img src="images/cold_thermometer.png" alt="clouds" id="cloudy">
                 </div>
             </div>
-        </div>
+        </nav>
 
-        <div class="weather-details ">
+        <nav class="weather-details ">
             <div class="small-text weather-format">
                 <div class="small-text weather-format">
                      Wind
@@ -112,15 +114,22 @@
                     <img src="images/cold_thermometer.png" alt="wind" id="windy">
                 </div>
             </div>
-        </div>
-    <nav>
-        <div class="blank-line"></div>  
-    </nav>
+        </nav>
+        <nav>
+            <div class="blank-line"></div>  
+        </nav>
     
-    <nav>
-        <div class="section-header" id="forecast">
-            Today’s Weather Forecast...</div>
+        <nav class="forecast">
+            <header class="section-header" id="forecast">
+                Today’s Weather Forecast...
+            </header>
+            <div class="card-section">
+                
+            </div>
+
+        </nav>
     </nav>
-    </div>
+
+
 </body>
 </html>
