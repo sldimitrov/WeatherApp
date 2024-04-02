@@ -27,15 +27,6 @@ body {
     background-image: url("images/background_image.jpg");
 }
 
-.cloudy-icon {
-    width: 100px;
-    margin-top: 50px;
-}
-
-#logo {
-    width: 150px;
-}
-
 .small-text {
     font-size: 20px;
 }
@@ -48,12 +39,35 @@ body {
     font-size: 90px;
 }
 
+.cloudy-icon {
+    display: flex;
+    width: 150px;
+    padding-left: 4em;
+}
+
+#logo {
+    width: 150px;
+}
+
+#city {
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    
+}
+
+#date {
+    color: white;
+    padding-top: 5px;
+    font-size: 15px;
+}
+
 .info-container {
     display: inline-flex;
     flex-wrap: wrap;
     align-items:baseline;
     max-width: 40%;
-    margin-top: 26em;
+    margin-top: 20em;
     margin-left: 4em;
 }
 
@@ -62,10 +76,10 @@ body {
     padding: 5px;
     height: 40px;
 }
-
 #date {
     padding-left: 40px;
 }
+
 
 .weather-container{
     border-left: 4px inset white;
@@ -109,8 +123,8 @@ body {
     align-items:baseline;
     border-bottom: 3px outset ghostwhite;
     color: white;
-    margin-left: 10%;
-    margin-right:10%;
+    margin-left: 1em;
+    margin-right: 1em;
     padding-left: 1em;
     padding-right: 1em;
 }
@@ -135,8 +149,8 @@ body {
 
 .blank-line {
     margin-top: 1em;
-    margin-left: 2em;
-    margin-right: 1cap;
+    margin-left: 1em;
+    margin-right: 1em;
     border-bottom: 3px inset ghostwhite;
 }
 
