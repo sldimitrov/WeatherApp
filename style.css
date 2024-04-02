@@ -96,6 +96,8 @@ body {
     height: auto;
     margin-left: 10%;
     margin-right:10%;
+    margin-bottom: 5%;
+    margin-top: 5%;
     display: flex;
 }
 
@@ -113,26 +115,31 @@ body {
     padding-right: 1em;
 }
 
+
 #tab-details {
     height: auto;
     margin-left: 10%;
     margin-right:10%;
     display: flex;
-    
-}
-
-#row1 {
-    height: 40px;
-    display: flex;
-    align-items:baseline;
+    padding: 1em;
 }
 
 .weather-tab-container, .section-header{
-    font-size: 20px;
+    font-size: 1.1em;
     text-align: center;
 }
 
-#hot {
-    width: 25px;
-    height: 35px;
+.weather-tab-container img{
+    width: 1.2em;
+    height: 1.5em;
 }
+
+
+.blank-line {
+    margin-top: 3em;
+    margin-left: 1em;
+    margin-right: 1em;
+    border-bottom: 3px inset ghostwhite;
+}
+
+
