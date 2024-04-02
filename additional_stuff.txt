@@ -13,6 +13,4 @@
 
 Недостатъци на проекта
     - използваш само div tags
-    - background design-a
     - main-info scalability 
-    - 
