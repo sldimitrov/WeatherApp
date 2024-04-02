@@ -26,7 +26,7 @@ body {
 
 .weather-tab-container {
     color: aliceblue;
-    border-left: 3px solid cadetblue;
+    border-left: 4px solid cadetblue;
     position: absolute;
     width: 33%;
     height: 100%;
@@ -51,6 +51,13 @@ body {
     opacity: 1;
     background-color: white;
     background-image: url("images/background_image.jpg");
+}
+
+.card-section {
+    width: 26em;
+    height: 5em;
+    display: flex;
+    justify-content: space-between;
 }
 
 .small-text {
@@ -93,6 +100,27 @@ body {
     padding-left: 12.5em;
 }
 
+#forecast {
+    padding-top: 0.8em;
+    padding-bottom: 0.4em;
+    text-align: left;
+}
+
+.forecast-image, #snowflake-img {
+    padding-left: 1em;
+    width: 30px;
+    height: 30px;
+}
+
+.forecast-info {
+    padding-right: 13em;
+}
+
+.temperature {
+    font-size: 1.5em;
+    padding-top: 0.3em;
+}
+
 #search {
     font-family: "Noto Sans", sans-serif;
     font-optical-sizing: auto;
@@ -123,13 +151,7 @@ body {
     margin-top: 1em;
     margin-left: 1em;
     margin-right: 1em;
-    border-bottom: 3px inset ghostwhite;
-}
-
-#forecast {
-    padding-top: 2em;
-    padding-left: 2em;
-    text-align: left;
+    border-bottom: 1px inset ghostwhite;
 }
 
 .weather-format{
@@ -152,10 +174,6 @@ body {
     margin-right: 1em;
     padding-left: 1em;
     padding-right: 1em;
-}
-
-#tab-details {
-    margin-right:15%;
 }
 
 .row {
