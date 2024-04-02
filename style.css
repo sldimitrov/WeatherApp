@@ -21,7 +21,7 @@ body {
     flex-wrap: wrap;
     width: 45vw;
     margin-left: 8vw;
-    margin-top: 20vw;
+    margin-top: 22vw;
     max-height: 100%;
 }
 
@@ -51,6 +51,7 @@ body {
     font-style:italic;
 }
 
+
 .weather-tab-container img{
     width: 1.2vw;
     height: 1.5vw;
@@ -66,13 +67,14 @@ body {
 
 
 #forecast-title {
-    padding-top: 0.8em;
-    padding-bottom: 0.4em;
+    padding-top: 2vw;
+    padding-bottom: 2em;
     text-align: left;
 }
 
 .forecast-image, #snowflake1, #snowflake2 {
-    padding-left: 1em;
+    padding-left: 1vw;
+    padding-right: 1vw;
     width: 33px;
     height: 33px;
 }
@@ -80,13 +82,13 @@ body {
 .temperature {
     font-size: 1.5vw;
     padding-top: 0.3em;
-    padding-right: 3vw;
+    padding-right: 4vw;
 }
 
 .forecast-info {
     display: flex;
     flex-wrap: wrap;
-    padding-right: 13em;
+    padding-right: 15vw;
 }
 
 .card-section {
@@ -164,8 +166,14 @@ body {
 }
 
 #cloud-img {
+    width: 4vw;
     padding-top: 5vw;
     padding-left: 4vw;
+}
+
+#snowflake1, #snowflake2 {
+    width: 2vw;
+    height: auto;
 }
 
 .weather-format{
@@ -184,8 +192,9 @@ body {
     justify-content: space-between;
     align-items:baseline;
     border-bottom: 2px outset ghostwhite;
+    margin-top: 0.3vw;
     margin-left: 1vw;
-    margin-right: 1vw;
+    margin-right: 5vw;
     padding-left: 1vw;
     padding-right: 1vw;
 }
@@ -200,7 +209,7 @@ body {
 #blank-line {
     margin-top: 1vw;
     margin-left: 1vw;
-    margin-right: 1vw;
+    margin-right: 5vw;
     border-bottom: 1px inset ghostwhite;
 }
 
