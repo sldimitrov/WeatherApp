@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Rubik+Scribble&display=swap');
 
 body {
     margin: 0px;
@@ -21,12 +24,10 @@ body {
     margin-top: 25em;
     width: 30em;
     height: 15em;
-    color:white;
 }
 
 .weather-tab-container {
-    color: aliceblue;
-    border-left: 4px solid cadetblue;
+    border-left: 4px solid rgb(60, 159, 163);
     position: absolute;
     width: 33%;
     height: 100%;
@@ -35,16 +36,27 @@ body {
     right: 0;
 }
 
+.info-container, .weather-tab-container {
+    color: white
+}
+
 .weather-tab-container, .section-header{
     font-size: 1.1em;
     padding-left: 2em;
     text-align: left;
 }
 
+.weather-details, #thunder {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 600;
+    font-style:italic;
+}
+
 .weather-tab-container img{
     width: 1.2em;
     height: 1.5em;
 }
+
 
 .blur {
     filter: blur(4px);
@@ -53,15 +65,41 @@ body {
     background-image: url("images/background_image.jpg");
 }
 
+
+#forecast {
+    padding-top: 0.8em;
+    padding-bottom: 0.4em;
+    text-align: left;
+}
+
+.forecast-image, #snowflake-img {
+    padding-left: 1em;
+    width: 30px;
+    height: 30px;
+}
+
+.forecast-info {
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 13em;
+}
+
 .card-section {
+    display: flex;
+    flex-wrap: wrap;
     width: 26em;
     height: 5em;
     display: flex;
     justify-content: space-between;
 }
 
+
 .small-text {
-    font-size: 1em;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+
 }
 
 .mid-text {
@@ -98,22 +136,6 @@ body {
     width: 16em;
     height: 5em;
     padding-left: 12.5em;
-}
-
-#forecast {
-    padding-top: 0.8em;
-    padding-bottom: 0.4em;
-    text-align: left;
-}
-
-.forecast-image, #snowflake-img {
-    padding-left: 1em;
-    width: 30px;
-    height: 30px;
-}
-
-.forecast-info {
-    padding-right: 13em;
 }
 
 .temperature {
