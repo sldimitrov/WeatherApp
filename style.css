@@ -136,7 +136,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     width: 380px;
-    height: 290px;
+    height: 315px;
     top: 170px;
 }
 
@@ -154,7 +154,26 @@ body {
     justify-content: space-between;
     width: 400px;
     height: 26px;
-    top: 85px;
+}
+
+#row1 {
+    top: 80px;
+}
+
+#row2 {
+    top: 135px;
+}
+
+#row3 {
+    bottom: 100px;
+}
+
+#row4 {
+    bottom: 50px;
+}
+
+#row5 {
+    bottom: 0px;
 }
 
 .row-temp {
