@@ -1,12 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-.basic-font {
-}
 
 .info-container, .weather-tab-container {
     color: #FFFFFF;
+}
+
+.blank-line {
+    border-bottom: 2px solid #ffff;
 }
 
 body {
@@ -104,7 +103,7 @@ body {
     flex-wrap: wrap;
     width: 400px;
     height: 50px;
-    border-bottom: 2px solid #ffff;
+
 }
 
 #search {
@@ -147,6 +146,10 @@ body {
     height: 30px;
 }
 
+.w-characteristics {
+    opacity: 0.7;
+}
+
 .row {
     position: absolute;
     display: flex;
@@ -154,6 +157,11 @@ body {
     justify-content: space-between;
     width: 400px;
     height: 26px;
+}
+
+.row-temp {
+    position: relative;
+    left: 120px;
 }
 
 #row1 {
@@ -176,7 +184,11 @@ body {
     bottom: 0px;
 }
 
-.row-temp {
-    position: relative;
-    left: 120px;
+#blank-container {
+    position: absolute;
+    display: flex;
+    width: 400px;
+    height: 50px;
+    top: 500px;
+    border-bottom: 3px solid white;
 }
