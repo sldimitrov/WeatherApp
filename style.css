@@ -131,27 +131,33 @@ body {
     top: 55px;
 }
 
-.weather-details {
-    position: relative;
+.forecast-container {
+    position: absolute;
     display: flex;
+    flex-wrap: wrap;
+    width: 380px;
+    height: 290px;
+    top: 170px;
 }
 
-
-#snowflake1, #snowflake2 {
-    width: 2vw;
-    height: auto;
+#forecast-header {
+    position: absolute;
+    top: 10px;
+    font-size: 18px;
+    height: 30px;
 }
 
 .row {
+    position: absolute;
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
+    width: 400px;
+    height: 26px;
+    top: 85px;
 }
 
-#blank-line {
-    margin-top: 1vw;
-    margin-left: 1vw;
-    margin-right: 5vw;
-    border-bottom: 1px inset ghostwhite;
+.row-temp {
+    position: relative;
+    left: 120px;
 }
-

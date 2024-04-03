@@ -1,0 +1,83 @@
+<nav>
+            <header>
+                THUNDERSTORM WITH HTML AND CSS
+            </header>
+        </nav>
+    
+        <nav class="row">
+            <div>
+                Temp max
+            </div>
+            <div>
+                19°
+                <img src="images/hot_thenometer.png" alt="hot thernometer">
+            </div>
+        </nav>
+
+        <nav>
+            <div class="row">
+                <div>
+                    Temp min
+                </div>
+                <div>
+                    15° 
+                    <img src="images/cold_themperature.png" alt="cold thernometer">
+                </div>
+            </div>
+        </nav>
+
+        <nav>
+            <div class="row">
+                <div>
+                     Wet
+                </div>
+                <div>
+                    58% <img src="images/waterdrop.png" alt="raindrop">
+                </div>
+            </div>
+        </nav>
+
+        <nav>
+            <div class="row">
+                <div>
+                     Cloudy
+                </div>
+                <div>
+                    86% <img src="images/cloudy.png" alt="clouds">
+                </div>
+            </div>
+        </nav>
+
+        <nav>
+            <div class="row">
+                <div>
+                     Wind
+                </div>
+                <div>
+                    5km/h <img src="images/wind.png" alt="wind">
+                </div>
+            </div>
+        </nav>
+    
+        <nav>
+            <div id="blank-line"></div>  
+        </nav>
+    
+        <nav class="forecast-container">
+            <header id="forecast-title">
+                Today’s Weather Forecast...
+            </header>
+
+            <section class="card-section">
+                <div class="forecast-image">
+                    <img src="images/Snow.png" alt="snowflake" id="snowflake1">    
+                </div>
+                <div class="forecast-info">
+                    09:00 <br>
+                    Snow
+                </div>
+                <div class="temperature" >
+                    19°
+                </div>
+            </nav>
+        </nav>
