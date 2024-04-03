@@ -13,20 +13,21 @@
         <img src="images/logo.png" id="logo">
     </header>
 
-    <section class="info-container">
-        <div class="big-text" id="header-temperature">
-            16°
-        </div>
-        <div class="mid-text" id="city">
-            London
-        </div>
-        <div>
-            <img src="images/Cloud.png" alt="cloud" id="cloud-img">
-        </div>
-        <div class="small-text" id="date">
-            06:09 - Monday, 9 Sep ‘23
-        </div>
-    </section>
+    <nav class="info-container">
+        <span class="current-temperature">
+            16°</span>
+
+        <article class="additional-info">
+            <header id="city">
+                London
+            </header>
+            <p id="date">
+                06:09 - Monday, 9 Sep ‘23
+            </p>
+        </article>
+
+        <img src="images/Cloud.png" alt="cloud" id="cloud-img">
+    </nav>
 
     <span class="weather-tab-container blur"></span>
 
@@ -120,20 +121,6 @@
                     19°
                 </div>
             </nav>
-
-            <nav class="card-section">
-                <div class="forecast-image">
-                    <img src="images/Snow.png" alt="snowflake" id="snowflake2">    
-                </div>
-                <div class="forecast-info">
-                    09:00 <br>
-                    Snow
-                </div>
-                <div class="temperature" >
-                    19°
-                </div>
-            </nav>
-
         </nav>
     </aside>
 
