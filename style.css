@@ -3,9 +3,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 .basic-font {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+}
+
+.info-container, .weather-tab-container {
+    color: #FFFFFF;
 }
 
 body {
@@ -18,6 +19,18 @@ body {
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#logo {
+    position: absolute;
+    display: flex;
+    width: 89px;
+    height: 55px;
+    left: 75px;
+    top: 30px;
 }
 
 .info-container {
@@ -40,8 +53,7 @@ body {
 
 #city {
     position: relative;
-    bottom: 75px;
-    left: 12px;
+    left: 8px;
     font-size: 65px;
 }
 
@@ -49,14 +61,15 @@ body {
     position: absolute;
     flex-wrap: wrap;
     font-size: 19.5px;
-    bottom: 0px;
-    left: 50px;
+    bottom: 55px;
+    right: 23px;
 }
 
 #cloud-img {
     position: relative;
-    bottom: 45px;
+    top: 28px;
     left: 65px;
+    padding-left: 4vw;
     width: 60px;
     height: 60px;
 }
@@ -78,13 +91,9 @@ body {
     right: 0;
 }
 
-.info-container, .weather-tab-container {
-    color: white
-}
-
 .weather-tab-container, .section-header{
     font-size: 17px;
-    padding-left: 30px;
+    padding-left: 35px;
     text-align: left;
 }
 
@@ -98,8 +107,13 @@ body {
     border-bottom: 2px solid #ffff;
 }
 
-.tab-header {
-    width: 300px;
+#search {
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    text-shadow: 3px 2px 3px black;
+    opacity: 0.6;
 }
 
 #searcher {
@@ -111,131 +125,24 @@ body {
 
 }
 
-.weather-details, #thunder {
-    font-family: "Libre Baskerville", serif;
-    font-weight: 400;
-    font-style:italic;
-}
-
-
-.weather-tab-container img{
-    width: 1.2vw;
-    height: 1.5vw;
-}
-
-
-.blur {
-}
-
-#forecast-title {
-    padding-top: 2vw;
-    padding-bottom: 2em;
-    text-align: left;
-}
-
-.forecast-image, #snowflake1, #snowflake2 {
-    padding-left: 1vw;
-    padding-right: 1vw;
-    width: 33px;
-    height: 33px;
-}
-
-.temperature {
-    padding-top: 0.3em;
-    padding-right: 4vw;
-}
-
-.forecast-info {
+.weather-details-container {
+    position: relative;
     display: flex;
-    flex-wrap: wrap;
-    padding-right: 15vw;
+    top: 55px;
 }
 
-.card-section {
+.weather-details {
+    position: relative;
     display: flex;
-    flex-wrap: wrap;
-    width: 26em;
-    height: 5em;
-    display: flex;
-    justify-content: space-between;
 }
 
-
-.small-text {
-    font-size: 18px;
-    font-family: "Raleway", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 450;
-    font-style: normal;
-}
-
-.mid-text {
-    font-size: 73px;
-}
-
-.pale-text {
-    width: 5em;
-    height: 1em;
-    font-family: "Noto Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    opacity: 0.6;
-    padding-right: 2em;
-    margin-right: 2em;
-}
-
-#city {
-    width: 3em;
-    height: 1em;
-    padding-top: 1.2em;
-}
-
-#date {
-    width: 16vw;
-    height: 5vw;
-    padding-left: 11.5vw;
-}
-
-#search {
-    font-family: "Noto Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    opacity: 0.6;
-}
-
-#logo {
-    position: absolute;
-    display: flex;
-    width: 89px;
-    height: 55px;
-    left: 75px;
-    top: 30px;
-}
-
-#cloud-img {
-    width: 4vw;
-    padding-top: 5vw;
-    padding-left: 4vw;
-}
 
 #snowflake1, #snowflake2 {
     width: 2vw;
     height: auto;
 }
 
-.weather-format{
-    height: auto;
-    margin-left: 10%;
-    margin-right:10%;
-    margin-bottom: 3.5%;
-    margin-top: 3.5%;
-    display: flex;
-}
-
 .row {
-    padding-right: 3vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
