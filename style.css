@@ -126,6 +126,7 @@ body {
     display: flex;
     align-items: end;
     height: 80px;
+    width: 133px;
     top: 55px;
 }
 
@@ -139,7 +140,6 @@ body {
 
 #forecast-heading {
     font-size: 21px;
-    top: 10px;
     font-size: 18px;
     height: 30px;
 }
@@ -157,48 +157,23 @@ body {
     height: 26px;
 }
 
-.row-temp {
-    left: 90px;
-}
-
-#row1 {
-    top: 80px;
-}
-
-#row2 {
-    top: 135px;
-}
-
-#row3 {
-    bottom: 100px;
-}
-
-#row4 {
-    bottom: 50px;
-}
-
-#row5 {
-    bottom: 0px;
-}
 
 #blank-container {
     display: flex;
     width: 400px;
     height: 50px;
-    top: 500px;
 }
 
 .weather-forecast-container {
     display: flex;
-    top: 570px;
-
+    align-items: end;
+    height: 75px;
 }
-
 
 .weather-container {
     display: flex;
-    top: 630px;
-
+    align-items: end;
+    height: 130px;
 }
 
 .line {
@@ -206,7 +181,7 @@ body {
     align-items:center;
     justify-content: space-between;
     width: 400px;
-    height: 90px;
+    height: 80px;
 }
 
 .hour-weather {
