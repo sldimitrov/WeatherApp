@@ -125,7 +125,7 @@ body {
 .weather-details-container {
     display: flex;
     align-items: end;
-    height: 80px;
+    height: 90px;
     width: 133px;
     top: 55px;
 }
@@ -167,7 +167,7 @@ body {
 .weather-forecast-container {
     display: flex;
     align-items: end;
-    height: 75px;
+    height: 90px;
 }
 
 .weather-container {
