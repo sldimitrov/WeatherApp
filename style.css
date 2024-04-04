@@ -23,10 +23,17 @@ body {
     font-style: normal;
 }
 
-#logo {
-    position: absolute;
+#logo-container {
     display: flex;
-    width: 89px;
+    align-items: end;
+    justify-content: center;
+    width: 270px;
+    height: 80px;
+}
+
+#logo {
+    display: flex;
+    width: 96px;
     height: 55px;
     left: 75px;
     top: 30px;
@@ -114,10 +121,10 @@ body {
 #search {
     font-family: "Noto Sans", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 600;
+    font-weight: 400;
     font-style: normal;
     font-size: 20px;
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 0.3px;
     -webkit-text-stroke-color: rgb(30, 28, 28);
     opacity: 0.7;
 }
@@ -139,9 +146,11 @@ body {
 }
 
 #forecast-heading {
+    display: flex;
+    align-items: start;
     font-size: 21px;
     font-size: 18px;
-    height: 30px;
+    height: 60px;
 }
 
 .w-characteristics {
