@@ -35,42 +35,38 @@ body {
 .info-container {
     position: absolute;
     display: flex;
-    bottom: 45px;
-    left: 100px;
+    align-items:center;
+    justify-content: space-between;
+    left: 160px;
+    top: 500px;
+    height: 230px;
+    width: 520px;
 }
 
-.additional-info {
+#additional-info {
     display: flex;
-    width: 130px;
-} 
+    flex-direction: column;
+    align-items: end;
+    height: 100px;
+}
 
-.current-temperature {
-    position: relative;
-    bottom: 48px;
+#current-temperature {
     font-size: 143px;
 }
 
 #city {
-    position: relative;
-    left: 8px;
-    font-size: 65px;
+    font-size: 60px;
+    height: 60px;
 }
 
 #date {
-    position: absolute;
-    flex-wrap: wrap;
-    font-size: 19.5px;
-    bottom: 55px;
-    right: 23px;
+    font-size: 18px;
+    height: 10px;
 }
 
 #cloud-img {
-    position: relative;
-    top: 28px;
-    left: 65px;
-    padding-left: 4vw;
-    width: 70px;
     height: 70px;
+    width: 70px;
 }
 
 .blur {
@@ -84,19 +80,19 @@ body {
     border-left: 4px solid rgba(212, 211, 211, 0.2);
     position: absolute;
     width: 526px;
-    height: 1205px;
+    height: 100%;
     top: 0;
     bottom: 0;
     right: 0;
 }
 
-.weather-tab-container, .section-header{
+.weather-tab-container, .section-heading{
     font-size: 17px;
     padding-left: 35px;
     text-align: left;
 }
 
-.tab-header-container {
+.tab-heading-container {
     position: relative;
     top: 35px;
     display: flex;
@@ -141,7 +137,7 @@ body {
     top: 170px;
 }
 
-#forecast-header {
+#forecast-heading {
     position: absolute;
     font-size: 21px;
     top: 10px;
