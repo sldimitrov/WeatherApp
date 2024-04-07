@@ -115,13 +115,13 @@ body {
     backdrop-filter: blur(5px);
 }
 
-#details {
+.details {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0px;
     padding-top: 10px;
-    height: 110px;
+    height: 100px;
 }
 
 #content-container {
@@ -131,6 +131,13 @@ body {
     width: 285px;
     height: 270px;
     margin-left: 45px;
+}
+
+#heading-container {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    height: 30px;
 }
 
 #heading {
@@ -176,4 +183,11 @@ body {
 #windy {
     width: 16px;
     height: 15px;
+}
+
+#bottom-border {
+    width: 290px;
+    height: 80px;
+    margin-left: 45px;
+    border-bottom: 1px solid #ffff;
 }
