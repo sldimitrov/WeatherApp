@@ -80,7 +80,7 @@ body {
 .blur {
     top: 0;
     bottom: 0;
-    le: 0;
+    right: 0;
     backdrop-filter: blur(9px);
 }
 
