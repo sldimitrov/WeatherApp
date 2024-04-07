@@ -18,15 +18,15 @@ body {
 
 #top-bar-container {
     display: flex;
-    height: 60px;
-    width: 350px;
     align-items: center;
     justify-content: space-between;
+    height: 60px;
+    width: 350px;
 }
 
 #logo-container {
-    margin: 0px;
     height: 30px;
+    margin: 0px;
 }
 
 #logo {
@@ -45,8 +45,8 @@ body {
 }
 
 #search-text {
-    margin: 0px;
     font-size: 12px;
+    margin: 0px;
     opacity: 0.7;
 }
 
@@ -58,43 +58,122 @@ body {
 #info-container {
     display:flex;
     align-items: end;
-    height: 180px;
+    height: 145px;
     margin-left: 15px;
 }
 
 #temp {
+    height: 70px;
     margin: 0px;
     font-size: 64px;
-    height: 70px;
 }
 
 #place-date-container {
     display: flex;
     align-items: end;
     flex-wrap: wrap;
-    height: 60px;
     width: 120px;
+    height: 60px;
 }
 
 #place {
-    font-size: 30px;
     height: 30px;
     margin: 0px;
+    font-size: 30px;
 }
 
 #date {
-    font-size: 10px;
-    margin: 0px;
     height: 15px;
+    margin: 0px;
+    font-size: 10px;
 }
 
 #cloud-container {
-    margin: 0px;
     height: 45px;
-
+    margin: 0px;
 }
 
 #cloud-icon {
     width: 40px;
     height: 40px;
+}
+
+#top-border {
+    border-top: 5px solid #838282;
+    opacity: 85%;
+}
+
+
+.bottom-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 490px;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    backdrop-filter: blur(5px);
+}
+
+#details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    padding-top: 10px;
+    height: 110px;
+}
+
+#content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 285px;
+    height: 270px;
+    margin-left: 45px;
+}
+
+#heading {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    height: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.variable {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.value {
+    width: 22px;
+    height: 12px;
+    padding-left: 130px;
+}
+
+.temperature-icon {
+    width: 11px;
+    height: 22px;
+}
+
+#waterdrop {
+    width: 17px;
+    height: 20px;
+}
+
+#cloudy {
+    width: 17px;
+    height: 17px;
+}
+
+#windy {
+    width: 16px;
+    height: 15px;
 }
