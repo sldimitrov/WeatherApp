@@ -54,3 +54,47 @@ body {
     width: 12px;
     height: 11px;
 }
+
+#info-container {
+    display:flex;
+    align-items: end;
+    height: 180px;
+    margin-left: 15px;
+}
+
+#temp {
+    margin: 0px;
+    font-size: 64px;
+    height: 70px;
+}
+
+#place-date-container {
+    display: flex;
+    align-items: end;
+    flex-wrap: wrap;
+    height: 60px;
+    width: 120px;
+}
+
+#place {
+    font-size: 30px;
+    height: 30px;
+    margin: 0px;
+}
+
+#date {
+    font-size: 10px;
+    margin: 0px;
+    height: 15px;
+}
+
+#cloud-container {
+    margin: 0px;
+    height: 45px;
+
+}
+
+#cloud-icon {
+    width: 40px;
+    height: 40px;
+}
