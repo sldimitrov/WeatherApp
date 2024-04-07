@@ -18,20 +18,20 @@ body {
 
 #top-bar-container {
     display: flex;
-    align-items: center;
+    align-items: end;
     justify-content: space-between;
-    height: 60px;
+    height: 35px;
     width: 350px;
 }
 
 #logo-container {
-    height: 30px;
+    height: 20px;
     margin: 0px;
 }
 
 #logo {
-    width: 39px;
-    height: 23px;
+    width: 43px;
+    height: 24px;
     padding-left: 15px;
 }
 
@@ -58,7 +58,7 @@ body {
 #info-container {
     display:flex;
     align-items: end;
-    height: 145px;
+    height: 170px;
     margin-left: 15px;
 }
 
@@ -143,7 +143,7 @@ body {
 #heading {
     display: flex;
     justify-content: center;
-    font-size: 14px;
+    font-size: 15.5px;
 }
 
 .row {
