@@ -8,33 +8,30 @@
 </head>
 <body>
     <div class="search">
-        <input type="text" placeholder="enter city name" spellcheck="false">
+        <input type="text" placeholder="Search Location..." spellcheck="false">
         <button><img src="images/search.png"></button>
     </div>
 
-    <div id="json-response"></div>
-
-    <h2 class="city">city</h2>
-    <br>
-    <p class="temp">temp</p>
-    <p class="date">date</p>
-    <img src="images/cold_thernometer.png" class="weather-icon">
+    <h1 id="current-temperature">temp</h1>
+    <p id="city">city</p>
+    <p id="date">date</p>
+    <img src="images/cold_thernometer.png" class="weather-icon" id="cloud-img">
     <br><br>
-    <p class="weather-title">weather-title</p>
+    <h2 class="weather-title">weather-title</h2>
     <br>
     <p class="temp-max">temp max</p>
     <p class="temp-min">temp min</p>
     <p class="humidity">humidity</p>
     <p class="cloudy">cloudy</p>
-    <p id="wind">15 km/h</p>
-
+    <p id="wind">wind</p>
 <script>
+
 const apiKey = "539d9b287b9b99eee7e12081aa43f3a8";
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q="
 
 const searchBox = document.querySelector(".search input");
 const searchBtn = document.querySelector(".search button");
-const weatherIcon = document.querySelector("weather-icon");
+const weatherIcon = document.getElementById("cloud-img");
 
 async function checkWeather(city){
     const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
@@ -42,14 +39,13 @@ async function checkWeather(city){
 
     console.log(data);
 
-    document.querySelector(".city").innerHTML = data.name;
-    document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°c";
+    document.getElementById("city").innerHTML = data.name;
+    document.getElementById("current-temperature").innerHTML = Math.round(data.main.temp) + "°c";
 
     const myUnixTimestamp = data.dt; // start with a Unix timestamp
     const myDate = new Date(myUnixTimestamp * 1000); // convert timestamp to milliseconds and construct Date object
-    document.querySelector(".date").innerHTML = myDate;
+    document.getElementById("date").innerHTML = myDate;
     
-
     document.querySelector(".weather-title").innerHTML = data.weather[0].description;
 
     document.querySelector(".temp-max").innerHTML = Math.round(data.main.temp_max) + "°c";
