@@ -12,18 +12,22 @@
         <button><img src="images/search.png"></button>
     </div>
 
-    <h1 id="current-temperature">temp</h1>
-    <p id="city">city</p>
-    <p id="date">date</p>
-    <img src="images/cold_thernometer.png" class="weather-icon" id="cloud-img">
-    <br><br>
-    <h2 class="weather-title">weather-title</h2>
+    <div>
+        <h1 id="current-temperature">temp</h1>
+        <p id="city">CITYYY</p>
+        <p id="date">date</p>
+        <img src="images/logo.png" id="cloud-img">
+    </div>
     <br>
-    <p class="temp-max">temp max</p>
-    <p class="temp-min">temp min</p>
-    <p class="humidity">humidity</p>
-    <p class="cloudy">cloudy</p>
-    <p id="wind">wind</p>
+    <div>
+        <h2 id="forecast-heading">weather-title</h2>
+        <br>
+        <p id="temp-max">temp max</p>
+        <p id="temp-min">temp min</p>
+        <p id="humidity">humidity</p>
+        <p id="cloudy">cloudy</p>
+        <p id="wind">wind</p>
+    </div>
 <script>
 
 const apiKey = "539d9b287b9b99eee7e12081aa43f3a8";
@@ -46,12 +50,12 @@ async function checkWeather(city){
     const myDate = new Date(myUnixTimestamp * 1000); // convert timestamp to milliseconds and construct Date object
     document.getElementById("date").innerHTML = myDate;
     
-    document.querySelector(".weather-title").innerHTML = data.weather[0].description;
+    document.getElementById("forecast-heading").innerHTML = data.weather[0].description;
 
-    document.querySelector(".temp-max").innerHTML = Math.round(data.main.temp_max) + "°c";
-    document.querySelector(".temp-min").innerHTML = Math.round(data.main.temp_min) + "°c";
-    document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
-    document.querySelector(".cloudy").innerHTML = data.clouds.all + "%";
+    document.getElementById("temp-max").innerHTML = Math.round(data.main.temp_max) + "°c";
+    document.getElementById("temp-min").innerHTML = Math.round(data.main.temp_min) + "°c";
+    document.getElementById("humidity").innerHTML = data.main.humidity + "%";
+    document.getElementById("cloudy").innerHTML = data.clouds.all + "%";
     document.getElementById("wind").innerHTML = data.wind.speed + " km/h";
 
     if(data.weather[0].main == "Clouds"){
