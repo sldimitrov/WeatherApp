@@ -12,12 +12,16 @@
         <img src="images/logo.png" id="logo">
     </div>
     <header class="info-container basic-font">
+        <div>
         <p class="current-temperature">16°</p>
+        </div>
         <section class="basic-font" id="additional-info">
             <heading id="city">London</heading>
             <p id="date">06:09 - Monday, 9 Sep ‘23</p>
         </section>
-        <img src="images/Cloud.png" alt="cloud" id="cloud-img">
+        <div id="image-container">
+            <img src="images/Cloud.png" alt="cloud" id="cloud-img">
+        </div>
     </header>
     <span class="weather-tab-container blur"></span>
     <main class="weather-tab-container">
@@ -64,7 +68,9 @@
         <section class="weather-container">
             <div class="line" id="line1">
                 <img src="images/Snow.png" alt="snowflake" class="weather-img">
-                <p class="hour-weather">09:00<br class="weather-description">Snow</p>
+                <div class="hour-weather">
+                    <p id="current-time">09:00</p><br><p id="weather-description">Snow</p>
+                </div>
                 <p class="forecast-temp">19°</p>
             </div>
         </section>
@@ -100,9 +106,8 @@
         document.getElementById("cloudy").innerHTML = data.clouds.all + "%";
         document.getElementById("wind").innerHTML = data.wind.speed + " km/h";
 
-        // document.querySelector(".")
-        document.querySelector(".weather-description").innerHTML = data.weather[0].description;
-        document.querySelector(".forecast-temp").innerHTML = Math.round(data.main.temp)
+        document.getElementById("weather-description").innerHTML = data.weather[0].description;
+        document.querySelector(".forecast-temp").innerHTML = Math.round(data.main.temp) + "°c";
     
         if(data.weather[0].main == "Clouds"){
             weatherIcon.src="images/clouds.png";

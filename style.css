@@ -48,7 +48,7 @@ body {
     flex-wrap: wrap;
     align-items:flex-end;
     justify-content: space-between;
-    height: 70vh;
+    height: 75vh;
     width: 50.5vw;
     margin-left: 15px;
 }
@@ -58,7 +58,7 @@ body {
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
-    height: 16vh;
+    height: 18vh;
     width: 20vw;
 }
 
@@ -80,8 +80,14 @@ body {
     height: 7vh;
 }
 
+#image-container {
+    display: flex;
+    height: 13vh;
+    width: 7vw;
+}
+
 #cloud-img {
-    height: 10vh;
+    height: 9vh;
     width: 7vw;
 }
 
@@ -225,9 +231,19 @@ body {
 
 .hour-weather {
     display: flex;
+    flex-wrap: wrap;
+    width: 6vw;
+    height: 5vh;
     font-size: 18px;
     opacity: 0.8;
-    right: 90px;
+}
+
+#current-time {
+    margin: 0px;
+}
+
+#weather-description {
+    margin: 0px;
 }
 
 .forecast-temp {
