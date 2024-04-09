@@ -44,49 +44,45 @@ body {
 }
 
 .info-container {
-    position: absolute;
     display: flex;
     flex-wrap: wrap;
     align-items:flex-end;
     justify-content: space-between;
-    background-size: cover;
-    left: 160px;
-    top: 500px;
-    height: 20vh;
-    width: 44.5vw;
+    height: 70vh;
+    width: 50.5vw;
+    margin-left: 15px;
 }
 
 #additional-info {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    align-items: end;
-    height: 100px;
+    align-items: center;
+    height: 16vh;
     width: 20vw;
 }
 
-#current-temperature {
-    font-size: 143px;
+.current-temperature {
+    font-size: 145px;
     margin: 0px;
+    padding-left: 7dvw;
 }
 
 #city {
-    font-size: 60px;
-    height: 60px;
+    font-size: 56px;
+    height: 8vh;
+
 }
 
 #date {
     margin: 0px;
     font-size: 17px;
-    height: 70px;
-}
-
-#cloud-container {
+    height: 7vh;
 }
 
 #cloud-img {
-    height: 70px;
-    width: 70px;
+    height: 10vh;
+    width: 7vw;
 }
 
 .blur {
@@ -102,10 +98,9 @@ body {
     display: flex;
     top: 0;
     right: 0;
-    width: 30vw;
+    width: 34vw;
     height: 100dvh;
     flex-direction: column;
-    flex-wrap: wrap;
     border-left: 4px solid rgba(212, 211, 211, 0.2);
 }
 
@@ -133,7 +128,7 @@ body {
     margin-bottom: 5px;
     border-radius: 45px;
     border-width: 5px;
-    border-color: rgb(45, 144, 231);
+    border-color: rgb(34, 123, 201);
     color:black;
     padding: 5px;
 }
@@ -159,7 +154,7 @@ body {
 .weather-details-container {
     display: flex;
     align-items: end;
-    height: 90px;
+    height: 11vh;
     width: 10vw;
     top: 55px;
 }
@@ -178,40 +173,40 @@ body {
     text-transform: uppercase;
     font-size: 21px;
     font-size: 18px;
-    height: 60px;
+    height: 8vh;
 }
 
 .w-characteristics {
     opacity: 0.7;
-    width: 250px;
+    width: 23vh;
 }
 
 .row {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 370px;
-    height: 26px;
+    width: 40vw;
+    height: 6vh;
 }
 
 
 #blank-container {
     display: flex;
-    width: 400px;
-    height: 50px;
+    width: 42vw;
+    height: 6vh;
 }
 
 .weather-forecast-container {
     display: flex;
     align-items: end;
     max-width: 18vw;
-    height: 90px;
+    height: 11vh;
 }
 
 .weather-container {
     display: flex;
     align-items: end;
-    height: 130px;
+    height: 16vh;
     max-width: 26vw;
 }
 
@@ -221,6 +216,11 @@ body {
     justify-content: space-between;
     width: 400px;
     height: 80px;
+}
+
+.weather-img {
+    height: 55px;
+    width: 55px;
 }
 
 .hour-weather {
@@ -233,8 +233,6 @@ body {
 .forecast-temp {
     font-size: 24px;
     opacity: 0.7;
-}
-
 }
 
 @media only screen and (min-width: 375px) { 
