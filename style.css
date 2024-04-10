@@ -220,23 +220,24 @@ body {
     height: 10vh;
 }
 
+.weather-container {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    height: 18vh;
+    max-width: 80vw;
+}
+
 .weather-forecast-container {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 80vw;
-    height: 10vh;
+    height: 13vh;
 }
 
 #weather-details {
     margin: 0px;
-}
-
-.weather-container {
-    display: flex;
-    align-items: end;
-    height: 10vh;
-    max-width: 70vw;
 }
 
 
@@ -244,8 +245,8 @@ body {
     display: flex;
     align-items:center;
     justify-content: space-between;
-    width: 400px;
-    height: 80px;
+    width: 75vw;
+    height: 10vh;
 }
 
 .weather-img {
