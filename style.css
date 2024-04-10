@@ -7,6 +7,9 @@ body {
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 
@@ -22,7 +25,7 @@ body {
 
 .blank-line {
     display: flex;
-    max-width: 70vw;
+    max-width: 77vw;
     border-bottom: 1px solid #ffff;
 }
 
@@ -214,7 +217,7 @@ body {
 #blank-container {
     display: flex;
     width: 80vw;
-    height: 6vh;
+    height: 10vh;
 }
 
 .weather-forecast-container {
@@ -281,7 +284,7 @@ and (max-width: 1149px) {
     body {
         background-image: url("images/background_tablet.jpg");
         width: auto;
-        height: 700px;
+        height: 1049;
         color: white;
     }
 
@@ -431,13 +434,14 @@ and (max-width: 1149px) {
 
     .weather-details-container {
         display: flex;
-        padding-top: 90px;
+        padding-top: 70px;
+        padding-bottom: 10px;
     }
 
     .forecast-container {
         display: flex;
         flex-wrap: wrap;
-        max-width: 35.5vw;
+        width: 40vw;
         height: 35vh;
         top: 170px;
     }
@@ -445,7 +449,7 @@ and (max-width: 1149px) {
     #forecast-heading-container {
         display: flex;
         justify-content: center;
-        height: 4.4vh;
+        height: 6.4vh;
         width: 55vw;
 
     }
@@ -456,8 +460,6 @@ and (max-width: 1149px) {
         font-size: 21px;
         font-size: 18px;
     }
-
-
 
     .row {
         display: flex;
@@ -474,16 +476,21 @@ and (max-width: 1149px) {
 
     #blank-container {
         display: flex;
-        width: 42vw;
+        width: 40vw;
         height: 6vh;
+    }
+
+    .weather-container {
+        display: flex;
+        flex-direction: column;
     }
 
     .weather-forecast-container {
         display: flex;
-        align-items: end;
+        align-items: center;
         justify-content: center;
-        width: 30vw;
-        height: 11vh;
+        width: 27vw;
+        height: 10vh;
     }
 
     #weather-details {
@@ -497,13 +504,12 @@ and (max-width: 1149px) {
         max-width: 26vw;
     }
 
-
     .line {
         display: flex;
         align-items:center;
         justify-content: space-between;
-        width: 400px;
-        height: 80px;
+        width: 25vw;
+        height: 10vh;
     }
 
     .weather-img {
@@ -533,6 +539,8 @@ and (max-width: 1149px) {
         font-size: 24px;
         opacity: 0.7;
     }
+
+    
 }
 
 
@@ -546,9 +554,6 @@ and (max-width: 1149px) {
         background-image: url("images/background_laptop.jpg");
         width: 1150px;
         height: 806px;
-        font-family: "Roboto", sans-serif;
-        font-weight: 400;
-        font-style: normal;
     }
 
     #top-bar-container {
@@ -693,22 +698,27 @@ and (max-width: 1149px) {
     .weather-details-container {
         display: flex;
         align-items: end;
-        height: 11vh;
-        width: 10vw;
+        height: 8vh;
+        width: 15vw;
         top: 55px;
+    }
+
+    #weather-details {
+        margin: 0px;
     }
 
     .forecast-container {
         display: flex;
         flex-wrap: wrap;
         max-width: 26.5vw;
-        height: 315px;
+        height: 70vh;
         top: 170px;
     }
     
     #forecast-heading-container {
         display: flex;
-        align-items: center;
+        align-items: end;
+        width: 55vw;
         height: 8vh;
     }
 
@@ -729,36 +739,36 @@ and (max-width: 1149px) {
         align-items: center;
         justify-content: space-between;
         width: 40vw;
-        height: 6vh;
+        height: 8vh;
     }
 
 
     #blank-container {
         display: flex;
         width: 42vw;
-        height: 2vh;
-    }
-
-    .weather-forecast-container {
-        display: flex;
-        align-items: end;
-        max-width: 18vw;
-        height: 11vh;
+        height: 8vh;
     }
 
     .weather-container {
         display: flex;
-        align-items: end;
-        height: 16vh;
+        flex-direction: column;
+        height: 40vh;
         max-width: 26vw;
+    }
+
+    .weather-forecast-container {
+        display: flex;
+        align-items: center;
+        max-width: 18vw;
+        height: 15vh;
     }
 
     .line {
         display: flex;
         align-items:center;
         justify-content: space-between;
-        width: 400px;
-        height: 80px;
+        width: 30vw;
+        height: 1vh;
     }
 
     .weather-img {
