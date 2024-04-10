@@ -8,13 +8,18 @@
     <link rel="icon" type="image/x-icon" href="images/tab-logo.png">
 </head>
 <body>
-    <div id="logo-container">
-        <img src="images/logo.png" id="logo">
-    </div>
-    <header class="info-container basic-font">
-        <div>
-        <p class="current-temperature">16°</p>
+    <div id="top-bar-container">
+        <div id="logo-container">
+            <img src="images/logo.png" id="logo">
         </div>
+                <section class="search-bar-container blank-line">
+            <input type="text" placeholder="Search Location..." spellcheck="false" id="search-text" maxlength="16">
+            <button id="search-button"><img src="images/search.png" id="searcher-img"></button>
+            <!-- <script src="test.js"></script> -->
+        </section>
+    </div>
+        <header class="info-container basic-font">
+        <p class="current-temperature">16°</p>
         <section class="basic-font" id="additional-info">
             <heading id="city">London</heading>
             <p id="date">06:09 - Monday, 9 Sep ‘23</p>
@@ -25,17 +30,12 @@
     </header>
     <span class="weather-tab-container blur"></span>
     <main class="weather-tab-container">
-        <section class="search-bar-container blank-line">
-            <input type="text" placeholder="Search Location..." spellcheck="false" id="search-text">
-            <button id="search-button"><img src="images/search.png" id="searcher-img"></button>
-            <!-- <script src="test.js"></script> -->
-        </section>
         <section class="weather-details-container">
             <p id="weather-details">Weather Details...</p>
         </section>
         <section class="forecast-container">
-            <heading id="forecast-heading">
-                <h4>THUNDERSTORM WITH LIGHT DRIZZLE</h4></heading>
+            <heading id="forecast-heading-container">
+                <h4 id="forecast-heading">THUNDERSTORM WITH LIGHT DRIZZLE</h4></heading>
             <div class="row" id="row1">
                 <p class="w-characteristics">Temp max</p>
                 <p id="temp-max">19°</p>
@@ -70,7 +70,7 @@
             <div class="line" id="line1">
                 <img src="images/Snow.png" alt="snowflake" class="weather-img">
                 <div class="hour-weather">
-                    <p id="current-time">09:00</p><br><p id="weather-description">Snow</p>
+                    <p id="current-time">09:00<br></p><br><p id="weather-description">Snow</p>
                 </div>
                 <p class="forecast-temp">19°</p>
             </div>
