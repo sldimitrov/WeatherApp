@@ -76,7 +76,6 @@ body {
     display: flex;
 }
 
-
 .blur {
     display: flex;
     backdrop-filter: blur(9px);
@@ -134,7 +133,6 @@ body {
     display: flex;
     align-items:center;
     justify-content: space-between;
-}
 
 .hour-weather {
     display: flex;
@@ -432,8 +430,8 @@ and (max-width: 1149px) {
     }
 
     #cloud-img {
-        height: 50px;
-        width: 50px;
+        height: 80px;
+        width: 80px;
     }
 
     .blur {
@@ -586,13 +584,13 @@ and (max-width: 1149px) {
 
     .info-container {
         height: 80vh;
-        width: 45vw;
+        width: 48vw;
         margin-left: 10px;
     }
 
     #additional-info {
         height: 14vh;
-        width: 16vw;
+        width: 17vw;
     }
 
     .current-temperature {
@@ -618,8 +616,8 @@ and (max-width: 1149px) {
     }
 
     #cloud-img {
-        height: 7vh;
-        width: 5vw;
+        height: 75px;
+        width: 75px;
     }
 
     .blur {
