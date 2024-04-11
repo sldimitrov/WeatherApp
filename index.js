@@ -3,8 +3,8 @@ const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q="
 
 const searchBox = document.querySelector(".search-bar-container input");
 const searchBtn = document.querySelector(".search-bar-container button");
-const weatherIcon = document.getElementById("weather-img")
-console.log(weatherIcon)
+const weatherIcon = document.getElementById("cloud-img")
+const miniIcon = document.querySelector(".weather-img")
 
 async function checkWeather(city){
     const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
@@ -32,23 +32,23 @@ async function checkWeather(city){
 
     if(data.weather[0].main == "Clouds"){
         weatherIcon.src="images/clouds.png";
-        mainIcon.src="images/clouds.png";
+        miniIcon.src="images/clouds.png";
     }
     else if (data.weather[0].main == "Clear"){
-        weatherIcon.src = "images/clear.png";
-        mainIcon.src = "images/clear.png";
+        weatherIcon.src="images/clear.png";
+        miniIcon.src="images/clear.png"
     }
     else if(data.weather[0].main == "Rain"){
-        weatherIcon.src = "images/rain.png"
-        mainIcon.src = "images/rain.png"
+        weatherIcon.src="images/rain.png";
+        miniIcon.src="images/rain.png";
     }
     else if(data.weather[0].main == "Drizzle"){
         weatherIcon.src ="images/drizzle.png";
-        mainIcon.src ="images/drizzle.png";
+        miniIcon.src="images/drizzle.png"
     }
     else if(data.weather[0].main == "Mist"){
-        weatherIcon.src = "images/mist.png";
-        mainIcon.src = "images/mist.png";
+        weatherIcon.src="images/mist.png";
+        miniIcon.src="images/mist.png"
     }
 }
 

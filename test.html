@@ -7,28 +7,79 @@
     <link rel="stylesheet" href="test.css">
 </head>
 <body>
-    <section class="search-bar-container blank-line">
-        <input type="text" placeholder="Search Location..." spellcheck="false" id="search-text">
-        <button id="search-button"><img src="images/search.png" id="searcher-img"></button>
-        <script src="test.js"></script>
-    </section>
+    <div class="search">
+        <input type="text" placeholder="enter city name" spellcheck="false">
+        <button><img src="images/search.png"></button>
     </div>
 
-    <div class="test">
-        <h1 class="current-temperature">temp</h1>
-        <p id="city">CITYYY</p>
-        <p id="date">date</p>
-        <img src="images/logo.png" id="weather-img">
-    </div>
+    <div id="json-response"></div>
+
+    <h2 class="city">city</h2>
     <br>
-    <div>
-        <h2 id="forecast-heading">weather-title</h2>
-        <br>
-        <p id="temp-max">temp max</p>
-        <p id="temp-min">temp min</p>
-        <p id="humidity">humidity</p>
-        <p id="cloudy">cloudy</p>
-        <p id="wind">wind</p>
-    </div>
+    <p class="temp">temp</p>
+    <p class="date">date</p>
+    <img src="images/cold_thernometer.png" class="weather-icon">
+    <br><br>
+    <p class="weather-title">weather-title</p>
+    <br>
+    <p class="temp-max">temp max</p>
+    <p class="temp-min">temp min</p>
+    <p class="humidity">humidity</p>
+    <p class="cloudy">cloudy</p>
+    <p id="wind">15 km/h</p>
+
+<script>
+const apiKey = "539d9b287b9b99eee7e12081aa43f3a8";
+const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q="
+
+const searchBox = document.querySelector(".search input");
+const searchBtn = document.querySelector(".search button");
+const weatherIcon = document.querySelector(".weather-icon");
+
+async function checkWeather(city){
+    const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
+    var data = await response.json();
+
+    console.log(data);
+
+    document.querySelector(".city").innerHTML = data.name;
+    document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°c";
+
+    const myUnixTimestamp = data.dt; // start with a Unix timestamp
+    const myDate = new Date(myUnixTimestamp * 1000); // convert timestamp to milliseconds and construct Date object
+    document.querySelector(".date").innerHTML = myDate;
+
+
+    document.querySelector(".weather-title").innerHTML = data.weather[0].description;
+
+    document.querySelector(".temp-max").innerHTML = Math.round(data.main.temp_max) + "°c";
+    document.querySelector(".temp-min").innerHTML = Math.round(data.main.temp_min) + "°c";
+    document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
+    document.querySelector(".cloudy").innerHTML = data.clouds.all + "%";
+    document.getElementById("wind").innerHTML = data.wind.speed + " km/h";
+
+    if(data.weather[0].main == "Clouds"){
+        weatherIcon.src="images/clouds.png";
+    }
+    else if (data.weather[0].main == "Clear"){
+        weatherIcon.src = "images/clear.png";
+    }
+    else if(data.weather[0].main == "Rain"){
+        weatherIcon.src = "images/rain.png"
+    }
+    else if(data.weather[0].main == "Drizzle"){
+        weatherIcon.src ="images/drizzle.png";
+    }
+    else if(data.weather[0].main == "Mist"){
+        weatherIcon.src = "images/mist.png";
+    }
+}
+
+searchBtn.addEventListener("click", ()=>{
+    checkWeather(searchBox.value);
+})
+
+checkWeather();
+</script>
 </body>
 </html>
