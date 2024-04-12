@@ -249,13 +249,15 @@ body {
 }
 
 #current-time {
+    font-size: 20px;
     margin: 0px;
 }
 
 #weather-description {
     margin: 0px;
-    width: 5vw;
+    width: 12vw;
     font-size: 13px;
+    padding-bottom: 15px
 }
 
 .forecast-temp {
@@ -477,7 +479,7 @@ and (max-width: 1149px) {
 
     .line {
         display: flex;
-        align-items:center;
+        align-items: start;
         justify-content: space-between;
         width: 25vw;
         height: 8vh;
@@ -502,6 +504,7 @@ and (max-width: 1149px) {
         height: 8vh;
         font-size: 18px;
         opacity: 0.8;
+        padding-left: 5px;
     }
 
     #current-time {
@@ -510,15 +513,15 @@ and (max-width: 1149px) {
 
     #weather-description {
         margin: 0px;
-        font-size: 13px
+        font-size: 13px;
     }
 
     .forecast-temp {
         margin: 0px;
         font-size: 24px;
         opacity: 0.7;
-        padding-bottom: 17px;
-    }
+        padding-top: 5px;
+}
 
     
 }
