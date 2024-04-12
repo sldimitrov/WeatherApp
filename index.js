@@ -16,9 +16,9 @@ async function checkWeather(city){
     document.querySelector(".current-temperature").innerHTML = Math.round(data.main.temp) + "°";
 
     const myUnixTimestamp = data.dt; // start with a Unix timestamp
-    const myDate = new Date(myUnixTimestamp * 1000); // convert timestamp to milliseconds and construct Date object
+    const myDate = new Date(myUnixTimestamp * 1000).toUTCString(); // convert timestamp to milliseconds and construct Date object
+
     document.getElementById("date").innerHTML = myDate;
-    
     document.getElementById("forecast-heading").innerHTML = data.weather[0].description;
 
     document.getElementById("temp-max").innerHTML = Math.round(data.main.temp_max) + "°c";
