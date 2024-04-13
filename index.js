@@ -30,19 +30,6 @@ async function checkWeather(city){
     document.getElementById("weather-description").innerHTML = data.weather[0].description;
     document.querySelector(".forecast-temp").innerHTML = Math.round(data.main.temp) + "°c";
 
-    /* Optime JS code 
-    
-    mapper = {"Clouds": "images/clouds.png",
-              "Clear": "images/clear.png"}, ...
-
-    data = "clouds"
-       
-    icon = mapper[data]
-
-    picture1.src = icon
-    picture2.src = icon
-    */
-
     const mapper = new Map([
         ["Clouds", "images/clouds.png"],
         ["Clear", "images/clear.png"],
@@ -57,29 +44,6 @@ async function checkWeather(city){
 
       weatherIcon.src = icon;
       miniIcon.src = icon;
-
-    /*
-    if(data.weather[0].main == "Clouds"){
-        weatherIcon.src="images/clouds.png";
-        miniIcon.src="images/clouds.png";
-    }
-    else if (data.weather[0].main == "Clear"){
-        weatherIcon.src="images/clear.png";
-        miniIcon.src="images/clear.png"
-    }
-    else if(data.weather[0].main == "Rain"){
-        weatherIcon.src="images/rain.png";
-        miniIcon.src="images/rain.png";
-    }
-    else if(data.weather[0].main == "Drizzle"){
-        weatherIcon.src ="images/drizzle.png";
-        miniIcon.src="images/drizzle.png"
-    }
-    else if(data.weather[0].main == "Mist"){
-        weatherIcon.src="images/mist.png";
-        miniIcon.src="images/mist.png"
-    }
-    */
 }
 
 searchBtn.addEventListener("click", ()=>{
