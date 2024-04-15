@@ -1,43 +1,44 @@
+//   Initialise variables
+// For the API connection
 const apiKey = "539d9b287b9b99eee7e12081aa43f3a8";
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q="
-
+// Store the data from the input
 const searchBox = document.querySelector(".search-bar-container input");
+// Initialise variables for the buttons
 const searchBtn = document.getElementById("search-button");
 const historyBtn = document.getElementById("history-button");
 const removeHistoryBtn = document.getElementById("exit-img");
+// And for the two icons that change 
 const weatherIcon = document.getElementById("cloud-img")
 const miniIcon = document.querySelector(".weather-img")
 
+// Add event listeners to the history buttons
 historyBtn.addEventListener('click', showHistory);
 removeHistoryBtn.addEventListener('click', removeHistory);
 
-searchHistoryContainer = document.querySelector(".sidebar-background-container");
-
-document.addEventListener('click', (event) => {
-    console.log('123')
-    if (searchHistoryContainer.style.display === 'block') {
-      if (!searchHistoryContainer.contains(event.target) && !homeDesktopChild.contains(event.target) && event.target !== document.getElementById('search-history-btn')) {
-        removeHistory();
-      }
-    }
-});
-
 async function showHistory(){
-    /* This function should show a slide bar that appears from the left of the page */
+    /* This function should SHOW a slide bar that appears from the left of the page */
     document.querySelector('.sidebar-container').classList.add('active');
     document.querySelector('.sidebar-background-container').classList.add('active');
 }
 
+
 async function removeHistory(){
+    /* This function should REMOVE slide bar that appears from the left */
     document.querySelector('.sidebar-container').classList.remove('active');
     document.querySelector('.sidebar-background-container').classList.remove('active');
 }
 
 
 async function checkWeather(city){
+    /* 
+    The main purpose of this function is to requrest the data from the weather RESTapi */
+
+    // Fetch the api and get the returned data
     const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
     var data = await response.json();
 
+    // Extract the needed data from the source
     var city = data.name;
     var currentTemperature = Math.round(data.main.temp) + "°";
     var forecastHeading = data.weather[0].description;
@@ -46,15 +47,16 @@ async function checkWeather(city){
     var humidity = data.main.humidity + "%";
     var clouds = data.clouds.all + "%";
     var wind = data.wind.speed + " km/h";
-    
     var weatherDescription = data.weather[0].description;
     var forecastTemp = Math.round(data.main.temp) + "°c";
 
+    // Convert the data into Date object
+    const myUnixTimestamp = data.dt; // start with a Unix timestamp
+    const myDate = new Date(myUnixTimestamp * 1000).toUTCString(); // convert timestamp to milliseconds
+
+    // Spill the data into each HTML element
     document.getElementById("city").innerHTML = city;
     document.querySelector(".current-temperature").innerHTML = currentTemperature;
-
-    const myUnixTimestamp = data.dt; // start with a Unix timestamp
-    const myDate = new Date(myUnixTimestamp * 1000).toUTCString(); // convert timestamp to milliseconds and construct Date object
 
     document.getElementById("date").innerHTML = myDate;
     document.getElementById("forecast-heading").innerHTML = forecastHeading;
@@ -68,6 +70,7 @@ async function checkWeather(city){
     document.getElementById("weather-description").innerHTML = weatherDescription;
     document.querySelector(".forecast-temp").innerHTML = forecastTemp;
 
+    // Initialise a mapper in order to optimize the change of the icons
     const mapper = new Map([
         ["Clouds", "images/clouds.png"],
         ["Clear", "images/clear.png"],
@@ -75,20 +78,35 @@ async function checkWeather(city){
         ["Drizzle", "images/drizzle.png"],
         ["Mist", "images/mist.png"],
       ]);
-
+    // Get the forecast heading 
     forecastData = data.weather[0].main;
-
+    // and the icon that is suitable for the current weather
     icon = mapper.get(forecastData)
-
+    // Then, finally, change the icons
     weatherIcon.src = icon;
     miniIcon.src = icon;
 
-    // After visualisation we will need to store the 
-    // searched data into the session storage
-    
-    sessionStorage.setItem('city', JSON.stringify({'name': city}));
-    // Check the saved data into the sessionStorage 
-    // console.log(sessionStorage);
+    // Save the input data into a container with the city in the searching history
+    // Store the searched data into the session storage
+    sessionStorage.setItem('city', JSON.stringify({'name': city})); 
+
+    // Initialise container element
+    var cityRow = document.createElement('div').classList.add('browsed-city')
+
+    // Initialise paragraph with the name of the town
+    var cityName = document.createElement('div').classList.add('town')
+    console.log(cityName)
+    cityName.innerText = data.name;
+
+    var historyContainer = document.getElementsByClassName('history-container')[0]
+
+    cityRow.append(cityName)
+    historyContainer.append(cityRow)
+
+    //const nameParagraph = document.getElementById('town')
+    // outputElement.textContent = `${city}`;
+    //cityContainer.appendChild(nameParagraph)
+    //historyContainer.appendChild(cityContainer)
 }
 
 searchBtn.addEventListener("click", ()=>{
