@@ -565,15 +565,18 @@ and (max-width: 1149px) {
     }
 
     .sidebar-container {
-        z-index: 2;
+        z-index: 3;
         position: absolute;
         flex-direction: column;
         display: flex;
-        width: 315px;
+        width: 16vw;
         height: 100%;
-        background-color: rgb(27, 25, 25);
-        opacity: 0.5;
-        left: -315px;
+        background-image: linear-gradient(rgb(4, 4, 125), rgb(32, 150, 170));
+        backdrop-filter: blur(10%);
+        opacity: 1;
+        left: -18vw;
+        transition: left 0.3s ease;
+        padding-left: 25px;
     }
 
     .sidebar-container.active {
@@ -581,7 +584,7 @@ and (max-width: 1149px) {
     }
 
     .sidebar-background-container {
-        z-index: 1;
+        z-index: 2;
         position: absolute;
         display: flex;
         width: 100%;
@@ -589,6 +592,7 @@ and (max-width: 1149px) {
         background-color: rgb(39, 33, 33);
         opacity: 0.3;
         left: -100%;
+        transition: left 0.35s ease;
     }
 
     .sidebar-background-container.active {
@@ -597,32 +601,41 @@ and (max-width: 1149px) {
         width: 100%;
         height: 100%;
         background-color: rgb(27, 25, 25);
-        opacity: 0.9;
+        opacity: 0.8;
         left: 0;
     }
 
     .sidebar-nav {
         display: flex;
+        align-items: center;
         justify-content: space-around;
+        margin-top: 10px;
+        border-bottom: 2px solid white;
+        width: 15vw;
     }
 
     #sidebar-heading {
+        z-index: 2;
         margin: 0px;
         color: #fff;
-        font-size: 26px;
+        font-size: 22px;
         width: 220px;
     }
 
     #exit-button {
         display: flex;
+        align-items: center;
         margin: 0px;
-        width: 35px;
-        height: 35px;
+        width: 36px;
+        height: 33px;
+        border-radius: 50px;
+        border: 1px solid rgb(222, 52, 52);
+        margin-bottom: 5px;
     }
 
     #exit-img {
-        width: 25px;
-        height: 25px;
+        width: 22px;
+        height: 23px;
     } 
 
     .search-bar-container {

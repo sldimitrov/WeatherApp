@@ -3,17 +3,35 @@ const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q="
 
 const searchBox = document.querySelector(".search-bar-container input");
 const searchBtn = document.getElementById("search-button");
-const historyBtn = document.getElementById("history-button")
+const historyBtn = document.getElementById("history-button");
+const removeHistoryBtn = document.getElementById("exit-img");
 const weatherIcon = document.getElementById("cloud-img")
 const miniIcon = document.querySelector(".weather-img")
 
-historyBtn.addEventListener('click', showHistory)
+historyBtn.addEventListener('click', showHistory);
+removeHistoryBtn.addEventListener('click', removeHistory);
+
+searchHistoryContainer = document.querySelector(".sidebar-background-container");
+
+document.addEventListener('click', (event) => {
+    console.log('123')
+    if (searchHistoryContainer.style.display === 'block') {
+      if (!searchHistoryContainer.contains(event.target) && !homeDesktopChild.contains(event.target) && event.target !== document.getElementById('search-history-btn')) {
+        removeHistory();
+      }
+    }
+});
 
 async function showHistory(){
     /* This function should show a slide bar that appears from the left of the page */
-    document.querySelector('.sidebar-container').classList.toggle('active');
-    document.querySelector('.sidebar-background-container').classList.toggle('active');
-} 
+    document.querySelector('.sidebar-container').classList.add('active');
+    document.querySelector('.sidebar-background-container').classList.add('active');
+}
+
+async function removeHistory(){
+    document.querySelector('.sidebar-container').classList.remove('active');
+    document.querySelector('.sidebar-background-container').classList.remove('active');
+}
 
 
 async function checkWeather(city){
