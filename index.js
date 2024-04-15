@@ -12,6 +12,7 @@ historyBtn.addEventListener('click', showHistory)
 async function showHistory(){
     /* This function should show a slide bar that appears from the left of the page */
     document.querySelector('.sidebar-container').classList.toggle('active');
+    document.querySelector('.sidebar-background-container').classList.toggle('active');
 } 
 
 
