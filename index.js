@@ -11,6 +11,7 @@ async function checkWeather(city){
     var data = await response.json();
 
     console.log(data);
+    console.log(data.name);
 
     document.getElementById("city").innerHTML = data.name;
     document.querySelector(".current-temperature").innerHTML = Math.round(data.main.temp) + "°";
