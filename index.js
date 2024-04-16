@@ -94,13 +94,14 @@ async function checkWeather(city){
     var cityRow = document.createElement('div').classList.add('browsed-city')
 
     // Initialise paragraph with the name of the town
-    var cityName = document.createElement('div').classList.add('town')
-    console.log(cityName)
-    cityName.innerText = data.name;
+    var cityName = document.createElement('p').classList.add('town')
+
+    cityRow.innerHTML.append(cityName)
 
     var historyContainer = document.getElementsByClassName('history-container')[0]
 
     cityRow.append(cityName)
+    console.log(cityRow)
     historyContainer.append(cityRow)
 
     //const nameParagraph = document.getElementById('town')
