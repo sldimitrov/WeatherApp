@@ -29,6 +29,43 @@ async function removeHistory(){
     document.querySelector('.sidebar-background-container').classList.remove('active');
 }
 
+// Функция за създаване на нов контейнер
+async function createContainer(city) {
+    const newContainer = document.createElement('div');
+    const parentContainer = document.querySelector(".history-container");
+    const children = parentContainer.getElementsByClassName(".browsed-city");
+    console.log(children)
+
+    // Въртене през децата на контейнера
+    for (let i = 0; i < children.length; i++) {
+        console.log(child);
+        const child = children[i];
+        console.log(content)
+        const content = child.textContent;
+
+        // Проверка дали детето съдържа определена стойност
+        if (content.includes("Banana")) {
+            console.log(`Намерено: ${content}`);
+        }
+    }
+
+    const eventButton = document.createElement("button");
+    eventButton.textContent = "Restore";
+    // SHOULD CLOSE THE TAB AND RESTORE THE DATA
+    eventButton.addEventListener("click", function() {
+        removeHistory()
+        checkWeather(city)
+    });
+
+    eventButton.id 
+    newContainer.classList.add('browsed-city'); // Добавете клас или стилове според нуждите си
+    newContainer.innerHTML = `<p>${city}</p>`; // Вмъкнете съдържание в параграф
+    newContainer.appendChild(eventButton)
+    newContainer.addEventListener("click", removeHistory())
+
+
+    parentContainer.appendChild(newContainer); // Добавете новия контейнер към родителския контейнер
+}
 
 async function checkWeather(city){
     /* 
@@ -86,32 +123,10 @@ async function checkWeather(city){
     weatherIcon.src = icon;
     miniIcon.src = icon;
 
-    // Save the input data into a container with the city in the searching history
-    // Store the searched data into the session storage
-    sessionStorage.setItem('city', JSON.stringify({'name': city})); 
-
-    // Initialise container element
-    var cityRow = document.createElement('div').classList.add('browsed-city')
-
-    // Initialise paragraph with the name of the town
-    var cityName = document.createElement('p').classList.add('town')
-
-    cityRow.innerHTML.append(cityName)
-
-    var historyContainer = document.getElementsByClassName('history-container')[0]
-
-    cityRow.append(cityName)
-    console.log(cityRow)
-    historyContainer.append(cityRow)
-
-    //const nameParagraph = document.getElementById('town')
-    // outputElement.textContent = `${city}`;
-    //cityContainer.appendChild(nameParagraph)
-    //historyContainer.appendChild(cityContainer)
+    // Call the funciton
+    createContainer(city);
 }
 
 searchBtn.addEventListener("click", ()=>{
     checkWeather(searchBox.value);
 })
-
-checkWeather();
