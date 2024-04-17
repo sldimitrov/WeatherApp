@@ -33,23 +33,10 @@ async function removeHistory(){
 async function createContainer(city) {
     const newContainer = document.createElement('div');
     const parentContainer = document.querySelector(".history-container");
-    const children = parentContainer.getElementsByClassName(".browsed-city");
-    console.log(children)
-
-    // Въртене през децата на контейнера
-    for (let i = 0; i < children.length; i++) {
-        console.log(child);
-        const child = children[i];
-        console.log(content)
-        const content = child.textContent;
-
-        // Проверка дали детето съдържа определена стойност
-        if (content.includes("Banana")) {
-            console.log(`Намерено: ${content}`);
-        }
-    }
+    const children = parentContainer.getElementsByClassName(".browsed-city")
 
     const eventButton = document.createElement("button");
+    eventButton.classList.add('restore-button')
     eventButton.textContent = "Restore";
     // SHOULD CLOSE THE TAB AND RESTORE THE DATA
     eventButton.addEventListener("click", function() {
@@ -57,13 +44,10 @@ async function createContainer(city) {
         checkWeather(city)
     });
 
-    eventButton.id 
     newContainer.classList.add('browsed-city'); // Добавете клас или стилове според нуждите си
-    newContainer.innerHTML = `<p>${city}</p>`; // Вмъкнете съдържание в параграф
+    newContainer.innerHTML = `<p class='test'>${city}</p>`; // Вмъкнете съдържание в параграф
     newContainer.appendChild(eventButton)
     newContainer.addEventListener("click", removeHistory())
-
-
     parentContainer.appendChild(newContainer); // Добавете новия контейнер към родителския контейнер
 }
 

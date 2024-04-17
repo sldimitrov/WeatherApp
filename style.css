@@ -650,7 +650,7 @@ and (max-width: 1149px) {
     .browsed-city {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
         width: 13vw;
         height: 30px;
         border: 3px solid rgb(29, 110, 164);
@@ -709,6 +709,11 @@ and (max-width: 1149px) {
         border-radius: 50px;
         border-width: 5px;
         border-color: #132059;
+    }
+
+    .restore-button {
+        border-radius: 25px;
+        border: 3px solid salmon;
     }
 
     #history-img {
