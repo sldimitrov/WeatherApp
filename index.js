@@ -45,7 +45,7 @@ async function createContainer(city) {
     });
 
     newContainer.classList.add('browsed-city'); // Добавете клас или стилове според нуждите си
-    newContainer.innerHTML = `<p class='test'>${city}</p>`; // Вмъкнете съдържание в параграф
+    newContainer.innerHTML = `<p class='city-name'>${city}</p>`; // Вмъкнете съдържание в параграф
     newContainer.appendChild(eventButton)
     newContainer.addEventListener("click", removeHistory())
     parentContainer.appendChild(newContainer); // Добавете новия контейнер към родителския контейнер
