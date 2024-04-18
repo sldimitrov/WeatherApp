@@ -14,9 +14,23 @@
         </div>
         <section class="search-bar-container blank-line">
             <input type="text" placeholder="Search Location..." spellcheck="false" id="search-text" maxlength="16">
+            <button id="history-button"><img src="images/history.png" id="history-img"></button>
             <button id="search-button"><img src="images/search.png" id="searcher-img"></button>
         </section>
     </div>
+    <aside class="aside">
+        <div class="sidebar-container">
+            <div class="sidebar-nav">
+                <h2 id="sidebar-heading">Searching History</h2>
+                <button id="exit-button"><img src="images/button.png" alt="exit button" id="exit-img"></button>
+            </div>
+            <section class="history-container">
+                <div class="browsed-city" id="example">
+                </div>
+            </section>
+        </div>
+    </aside>
+    <div class="sidebar-background-container" onclick="removeHistory()"></div>
     <div class="info-container basic-font">
         <p class="current-temperature">16°</p>
         <section class="basic-font" id="additional-info">
